@@ -61,19 +61,19 @@ object Expressions extends App {
  // Code block is an expression. The value of the whole block is the last value of the code block
 // The values inside code block is !!not visible!!
  outside
-  // 1. difference between "hello world" vs println("hello world")?
+  // 1. difference between "hello world" vs println("hello world")? ANS -> String and Unit
   // 2.
 
   val someValue = {
     2 < 3
   }
-  println(someValue)
+  println(someValue) // true
 
   val someOtherValue = {
     if(someValue) 239 else 986
     42
   }
-  println(someOtherValue)
+  println(someOtherValue)// 42
 
 
 }
