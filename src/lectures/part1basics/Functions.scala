@@ -7,24 +7,26 @@ object Functions extends App {
 
   def aFunction(a: String, b: Int): String = {
     a + " " + b
-  }
+  } // This a code block. The code block EXPRESSION return the last value
 
-  println(aFunction("hello", 3))
+  println(aFunction("hello", 3)) // call a function is also an expression
 
   def aParameterlessFunction(): Int = 42
   println(aParameterlessFunction())
-  println(aParameterlessFunction)
+  println(aParameterlessFunction) // no need to add () for parameters less functions
 
   def aRepeatedFunction(aString: String, n: Int): String = {
     if (n == 1) aString
     else aString + aRepeatedFunction(aString, n-1)
-  }
+  } // USE FUNCTIONS instead of LOOPS
+ //Compilers are intelligent to understand a recursive function. But return types are MANDATORY for recursive functions
 
   println(aRepeatedFunction("hello",3))
 
   // WHEN YOU NEED LOOPS, USE RECURSION.
 
-  def aFunctionWithSideEffects(aString: String): Unit = println(aString)
+  def aFunctionWithSideEffects(aString: String): Unit = println(aString) // Returns unit
+ // We use a function with side effect to do things like printing, logging and writing to files
 
   def aBigFunction(n: Int): Int = {
     def aSmallerFunction(a: Int, b: Int): Int = a + b
