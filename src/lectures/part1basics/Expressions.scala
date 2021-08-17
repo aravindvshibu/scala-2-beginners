@@ -5,11 +5,12 @@ package lectures.part1basics
   */
 object Expressions extends App {
 
-  val x = 1 + 2 // EXPRESSION
+  val x = 1 + 2 // EXPRESSION . 1+2 is an expression
   println(x)
 
   println(2 + 3 * 4)
   // + - * / & | ^ << >> >>> (right shift with zero extension)
+ // >>> is specific to Scala
 
   println(1 == x)
   // == != > >= < <=
@@ -17,17 +18,19 @@ object Expressions extends App {
   println(!(1 == x))
   // ! && ||
 
+ // changing vars is called SIDE EFFECTS
   var aVariable = 2
   aVariable += 3 // also works with -= *= /= ..... side effects
   println(aVariable)
 
   // Instructions (DO) vs Expressions (VALUE)
-
+ // In scala /functional language we will think in terms of expression unlike instructions in case of imperative language
+ // like python or scala
   // IF expression
   val aCondition = true
   val aConditionedValue = if(aCondition) 5 else 3 // IF EXPRESSION
   println(aConditionedValue)
-  println(if(aCondition) 5 else 3)
+  println(if(aCondition) 5 else 3) //SUPER IMPORTANT !!!
   println(1 + 3)
 
   var i = 0
@@ -36,12 +39,14 @@ object Expressions extends App {
     i += 1
   }
 
-  // NEVER WRITE THIS AGAIN.
+  // NEVER WRITE LOOPS
+ // Looping is specific to imperative languages like Python and java
 
   // EVERYTHING in Scala is an Expression!
 
   val aWeirdValue = (aVariable = 3) // Unit === void
   println(aWeirdValue)
+ // () --> represents units
 
   // side effects: println(), whiles, reassigning
 
@@ -53,7 +58,9 @@ object Expressions extends App {
 
     if (z > 2) "hello" else "goodbye"
   }
-
+ // Code block is an expression. The value of the whole block is the last value of the code block
+// The values inside code block is !!not visible!!
+ outside
   // 1. difference between "hello world" vs println("hello world")?
   // 2.
 
